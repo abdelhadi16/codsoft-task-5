@@ -9,9 +9,6 @@ def add_to_calculation(symbol):
     text_result.delete(1.0,"end")
     text_result.insert(1.0,calculation )
     
-
-
-
 def evaluate_calculator():
     global calculation
     try:
@@ -28,7 +25,7 @@ def evaluate_calculator():
        
 def evaluate_expression(expression):
     try:
-        # Split the expression by operators and keep the operators in a separate list
+        # Split the expression 
         numbers = []
         operators = []
         i = 0
@@ -81,7 +78,7 @@ def clear_field():
 
 
 root = tk.Tk()
-root.geometry("300x350")
+root.geometry("300x275")
 root.title("calculator")
 root.resizable(width=0,height=0)
 text_result = tk.Text(root,height=2,width=16,font=("Arial",24))
