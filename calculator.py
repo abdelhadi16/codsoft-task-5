@@ -78,10 +78,11 @@ def clear_field():
 
 
 root = tk.Tk()
-root.geometry("300x275")
+root.geometry("260x270")
 root.title("calculator")
+root.configure(bg="Grey")
 root.resizable(width=0,height=0)
-text_result = tk.Text(root,height=2,width=16,font=("Arial",24))
+text_result = tk.Text(root,height=2,width=16,font=("Arial",22))
 text_result.grid(columnspan=5)
 bt_1 = tk.Button(root,text='1',command=lambda:add_to_calculation(1),width=5 , font=("Arial",14) )
 bt_1.grid(row=2, column=1)
@@ -115,9 +116,9 @@ bt_open = tk.Button(root,text='(',command=lambda:add_to_calculation('('),width=5
 bt_open.grid(row=5,column=1)
 bt_close = tk.Button(root,text=')',command=lambda:add_to_calculation(')'),width=5 , font=("Arial",14) )
 bt_close.grid(row=5,column=3)
-bt_equel = tk.Button(root,text='=',command=evaluate_calculator,width=10 , font=("Arial",14) )
+bt_equel = tk.Button(root,text='=',command=evaluate_calculator,width=10 , font=("Arial",16) )
 bt_equel.grid(row=6,column=3,columnspan=2)
-bt_clear = tk.Button(root,text='C',command=clear_field,width=10 , font=("Arial",14) )
+bt_clear = tk.Button(root,text='C',command=clear_field,width=10 , font=("Arial",16) )
 bt_clear.grid(row=6,column=1, columnspan=2)
 root.mainloop()
 
