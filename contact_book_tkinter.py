@@ -51,7 +51,7 @@ class Contactapp:
         try:
             selected_index = self.contact_listbox.curselection()[0]
             contact = self.contacts.pop(selected_index)
-            self.update_listbox()
+            self.update_list()
             messagebox.showinfo("contact Deleted", f"contact '{contact['store_name']}' deleted .")
         except IndexError:
             messagebox.showwarning("selection Error", "please select a contact to delete.")
